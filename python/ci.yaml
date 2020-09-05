@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+  sast:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Semgrep
+        uses: returntocorp/semgrep-action@v1
+        with:
+            config: r/all
