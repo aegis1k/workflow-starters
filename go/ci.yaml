@@ -53,6 +53,8 @@ jobs:
   sast:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
       - name: Autobuild
