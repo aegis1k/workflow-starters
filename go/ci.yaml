@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Execute gofmt
         run: gofmt -s .
-  test:
+  unittest:
     runs-on: ubuntu-latest
     steps:
     - name: Install Go
